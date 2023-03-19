@@ -7,6 +7,34 @@ The aim of this project is to answer the questions of the Reinforcement Learning
 
 [Link to report](https://www.overleaf.com/5856789981bcctncztrsrw)
 
+# Prove that $V_\pi(s) = \mathbb{E}_\pi[R(s, \pi(s)] + \sum_{s^\prime \in S} P(s^\prime| s, \pi(s))V_\pi(s^\prime)$
+
+Given:
+
+$$V_\pi(s) = \mathbb{E}_\pi[R(s, \pi(s)] + \sum_{s^\prime \in S} P(s^\prime| s, \pi(s))V_\pi(s^\prime)$$
+
+Let us define the following notations:
+
+* $s$ : a state
+* $a$ : an action
+* $S_{t}$ : state at time t
+* $R(S_{t})$ : raeward at time t that depends on $S_{t}$
+* $\pi(a|s)$ : probability of choosing the action $a$ in the state $s$ under the stochastic policy $\pi$
+* $\mathbb{P}(s',r| s,a)$ : probability of going to state $s'$ with a reward $r$ from $s$ and $a$
+
+
+```
+$$
+V_{\pi}(s)  &=\mathbb{E}_{\pi}(\sum_{t \geqq 0} R(S_{t}|S_{0} = s)) \\
+        &= \mathbb{E}_{\pi}[R(S_{0}) + \sum_{t \geqq 0} R(S_{t+1})|S_{0} = s] \\
+            &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) [r + \mathbb{E}_{\pi}((\sum_{t \geqq 0} R(S_{t+1}|S_{1} = s')] \\
+            &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) [r + V_{\pi}(s')]
+$$
+```
+
+(4) est équivalent à :
+$V_{\pi}(s) = \mathbb{E}_{\pi}[R(s,\pi(s))] + \sum_{s'}\mathbb{P}(s'| s,\pi(s))V_{\pi}(s')$
+
 ## Contributors
 
 * Alanna DEVLIN-GENIN
