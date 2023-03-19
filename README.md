@@ -29,8 +29,8 @@ $$
 \end{align}
 $$
 
-
 (4) is equivalent to:
+
 $$V_{\pi}(s) = \mathbb{E}_{\pi}[R(s,\pi(s))] + \sum_{s'}\mathbb{P}(s'| s,\pi(s))V_{\pi}(s')$$
 
 ## Contributors
