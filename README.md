@@ -22,16 +22,18 @@ Let us define the following notations:
 
 $$
 \begin{align}
-  V_{\pi}(s)  &=\mathbb{E}_{\pi}(\sum_{t \geqq 0} R(S_{t}|S_{0} = s)) \\
-        &= \mathbb{E}_{\pi}[R(S_{0}) + \sum_{t \geqq 0} R(S_{t+1})|S_{0} = s] \\
-            &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) [r + \mathbb{E}_{\pi}((\sum_{t \geqq 0} R(S_{t+1}|S_{1} = s')] \\
-            &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) [r + V_{\pi}(s')]%
+  V_{\pi}(s)  &=\mathbb{E}_{\pi}\left(\sum_{t \geqq 0} R(S_{t}|S_{0} = s)\right) \\
+        &= \mathbb{E}_{\pi}\left[R(S_{0}) + \sum_{t \geqq 0} R(S_{t+1})|S_{0} = s\right] \\
+            &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) \left[r + \mathbb{E}_{\pi}\left(\sum_{t \geqq 0} R(S_{t+1}|S_{1} = s'\right)\right] \\
+            &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) [r + V_{\pi}(s')]
 \end{align}
 $$
 
 (4) is equivalent to:
 
 $$V_{\pi}(s) = \mathbb{E}_{\pi}[R(s,\pi(s))] + \sum_{s'}\mathbb{P}(s'| s,\pi(s))V_{\pi}(s')$$
+
+as it is only a reformulation of the problem.
 
 ## Contributors
 
