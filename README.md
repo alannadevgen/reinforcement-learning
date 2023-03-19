@@ -1,9 +1,12 @@
 # Reinforcement Learning homework
 
 The aim of this project is to answer the questions of the Reinforcement Learning homework by completing the following tasks:
-1. :abacus: Implement efficiently the Fibonacci computation using recursion :white_check_mark:
-3. :coin: Solve the Arsène Lupin problem with dynamic programming :white_check_mark:
-4. :video_game: Implement Connect 4 game through Q-learning :white_check_mark:
+
+:abacus: Implement efficiently the [Fibonacci](https://github.com/alannagenin/reinforcement-learning/blob/main/fibonacci/fibonacci.py) computation using recursion :white_check_mark:
+
+:coin: Solve the [Arsène Lupin](https://github.com/alannagenin/reinforcement-learning/blob/main/lupin/lupin.ipynb) problem with dynamic programming :white_check_mark:
+
+:video_game: Implement [Connect 4](https://github.com/alannagenin/reinforcement-learning/blob/main/connect4/connect4.ipynb) game through Q-learning :white_check_mark:
 
 ## Dynamic programming
 
