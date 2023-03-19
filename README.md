@@ -18,7 +18,7 @@ Let us define the following notations:
 * $s$ : a state
 * $a$ : an action
 * $S_{t}$ : state at time t
-* $R(S_{t})$ : raeward at time t that depends on $S_{t}$
+* $R(S_{t})$ : reward at time t that depends on $S_{t}$
 * $\pi(a|s)$ : probability of choosing the action $a$ in the state $s$ under the stochastic policy $\pi$
 * $\mathbb{P}(s',r| s,a)$ : probability of going to state $s'$ with a reward $r$ from $s$ and $a$
 
@@ -33,7 +33,7 @@ $$
 
 
 (4) is equivalent to:
-$V_{\pi}(s) = \mathbb{E}_{\pi}[R(s,\pi(s))] + \sum_{s'}\mathbb{P}(s'| s,\pi(s))V_{\pi}(s')$
+$$V_{\pi}(s) = \mathbb{E}_{\pi}[R(s,\pi(s))] + \sum_{s'}\mathbb{P}(s'| s,\pi(s))V_{\pi}(s')$$
 
 ---
 
