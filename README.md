@@ -5,7 +5,9 @@ The aim of this project is to answer the questions of the Reinforcement Learning
 3. Solve the Arsène Lupin problem with dynamic programming :white_check_mark:
 4. Implement Puissance 4 game through Q-learning :white_check_mark:
 
-# Dynamic programming
+---
+
+## Dynamic programming
 
 Prove that:
 
@@ -20,16 +22,20 @@ Let us define the following notations:
 * $\pi(a|s)$ : probability of choosing the action $a$ in the state $s$ under the stochastic policy $\pi$
 * $\mathbb{P}(s',r| s,a)$ : probability of going to state $s'$ with a reward $r$ from $s$ and $a$
 
-
-```
-V_{\pi}(s)  &=\mathbb{E}_{\pi}(\sum_{t \geqq 0} R(S_{t}|S_{0} = s)) \\
+$$
+\begin{align}
+  V_{\pi}(s)  &=\mathbb{E}_{\pi}(\sum_{t \geqq 0} R(S_{t}|S_{0} = s)) \\
         &= \mathbb{E}_{\pi}[R(S_{0}) + \sum_{t \geqq 0} R(S_{t+1})|S_{0} = s] \\
             &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) [r + \mathbb{E}_{\pi}((\sum_{t \geqq 0} R(S_{t+1}|S_{1} = s')] \\
-            &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) [r + V_{\pi}(s')]
-```
+            &= \sum_{a}\pi(a|s) \sum_{s'}\sum_{r}\mathbb{P}(s',r| s,a) [r + V_{\pi}(s')]%
+\end{align}
+$$
 
-(4) est équivalent à :
+
+(4) is equivalent to:
 $V_{\pi}(s) = \mathbb{E}_{\pi}[R(s,\pi(s))] + \sum_{s'}\mathbb{P}(s'| s,\pi(s))V_{\pi}(s')$
+
+---
 
 ## Contributors
 
