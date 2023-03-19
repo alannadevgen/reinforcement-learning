@@ -5,8 +5,6 @@ The aim of this project is to answer the questions of the Reinforcement Learning
 3. Solve the Arsène Lupin problem with dynamic programming :white_check_mark:
 4. Implement Puissance 4 game through Q-learning :white_check_mark:
 
----
-
 ## Dynamic programming
 
 Prove that:
@@ -34,8 +32,6 @@ $$
 
 (4) is equivalent to:
 $$V_{\pi}(s) = \mathbb{E}_{\pi}[R(s,\pi(s))] + \sum_{s'}\mathbb{P}(s'| s,\pi(s))V_{\pi}(s')$$
-
----
 
 ## Contributors
 
